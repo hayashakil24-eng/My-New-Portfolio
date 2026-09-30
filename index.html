@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Haya Shakil — Frontend Developer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="antialiased">
+
+<div class="scroll-progress"><div class="scroll-progress-fill"></div></div>
+
+<!-- Nav -->
+<header class="sticky top-0 z-40 bg-[var(--bg)]/90 backdrop-blur border-b border-[var(--border)]">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
+    <a href="#" class="font-display text-2xl">Haya Shakil</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+      <a href="#about" data-nav-link class="hover:text-[var(--accent)]">About</a>
+      <a href="#skills" data-nav-link class="hover:text-[var(--accent)]">Skills</a>
+      <a href="#projects" data-nav-link class="hover:text-[var(--accent)]">Projects</a>
+      <a href="#contact" data-nav-link class="hover:text-[var(--accent)]">Contact</a>
+    </nav>
+    <a href="cv.pdf" download
+       class="pill tinted !text-[var(--accent)] font-bold">
+      Download CV
+    </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="hero" class="relative overflow-hidden min-h-[90vh] flex items-center">
+  <div class="hero-mesh"></div>
+  <div class="hero-dotgrid"></div>
+  <div class="hero-spotlight" data-spotlight></div>
+
+  <div class="max-w-6xl mx-auto px-5 py-20 relative w-full" style="z-index:1;">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+      <!-- Left -->
+      <div>
+        <span class="hero-fade d1 pill tinted text-xs inline-flex items-center gap-2">
+          <span class="pulse-dot"></span> Available for work
+        </span>
+
+        <h1 class="font-display mt-5 leading-[1.05] tracking-tight"
+            style="font-size:clamp(2.6rem,6vw,4.5rem);">
+          <span class="word-stagger-item" style="animation-delay:.05s">Hi,</span>
+          <span class="word-stagger-item" style="animation-delay:.15s">I'm</span>
+          <span class="word-stagger-item text-[var(--accent)]" style="animation-delay:.25s">Haya</span>
+          <span class="word-stagger-item text-[var(--accent)]" style="animation-delay:.35s">Shakil</span>
+        </h1>
+
+        <p class="hero-fade d2 mt-4 text-lg font-bold role-rotator"
+           data-role-rotator data-roles="Frontend Developer,Laravel Developer,UI Builder">
+          <span>Frontend Developer</span>
+        </p>
+
+        <p class="hero-fade d2 mt-5 text-[var(--text-dim)]" style="max-width:620px; line-height:1.7;">
+          I build clean, functional web experiences with real HTML, CSS, and
+          JavaScript, backed by hands-on Laravel PHP and a growing focus on Angular.
+        </p>
+
+        <div class="hero-fade d3 mt-8 flex flex-wrap items-center gap-4">
+          <a href="#contact" data-magnetic
+             class="bg-[var(--accent)] text-white font-bold px-7 py-3 rounded-full hover:!bg-[var(--accent-hover)] transition">
+            Hire Me
+          </a>
+          <a href="#projects"
+             class="border border-[var(--border)] font-bold px-7 py-3 rounded-full hover:border-[var(--accent)] transition">
+            View Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: code window -->
+      <div class="hero-fade d3 relative mx-auto w-full max-w-md" data-parallax-el="code">
+        <div class="code-window">
+          <div class="code-window-bar"><span></span><span></span><span></span></div>
+          <pre class="code-window-body"><code data-typewriter></code></pre>
+        </div>
+        <span class="float-chip c1" data-parallax-el="chip1">HTML</span>
+        <span class="float-chip c2" data-parallax-el="chip2">Laravel</span>
+        <span class="float-chip c3" data-parallax-el="chip3">Angular</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Stats + tech marquee -->
+<section class="py-14 border-y border-[var(--border)] reveal">
+  <div class="max-w-6xl mx-auto px-5 grid grid-cols-3 gap-6 text-center mb-10">
+    <div>
+      <div class="font-display text-4xl"><span data-counter="2">0</span>+</div>
+      <p class="text-xs text-[var(--text-dim)] mt-1">Years Experience</p>
+    </div>
+    <div>
+      <div class="font-display text-4xl"><span data-counter="9">0</span>+</div>
+      <p class="text-xs text-[var(--text-dim)] mt-1">Projects Built</p>
+    </div>
+    <div>
+      <div class="font-display text-4xl"><span data-counter="15">0</span>+</div>
+      <p class="text-xs text-[var(--text-dim)] mt-1">Skills &amp; Tools</p>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Laravel</span><span>PHP</span><span>Angular</span><span>Tailwind CSS</span><span>MySQL</span>
+      <span aria-hidden="true">HTML</span><span aria-hidden="true">CSS</span><span aria-hidden="true">JavaScript</span><span aria-hidden="true">Laravel</span><span aria-hidden="true">PHP</span><span aria-hidden="true">Angular</span><span aria-hidden="true">Tailwind CSS</span><span aria-hidden="true">MySQL</span>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="px-5 py-16 reveal">
+  <div class="about-col mx-auto text-center">
+    <p class="eyebrow">Get to know me</p>
+    <h2 class="font-display text-4xl mt-2 mb-5">About</h2>
+    <p class="text-[var(--text-dim)] about-text">
+      Full Stack Developer with 9+ completed projects and strong expertise in
+      front-end development using HTML5, CSS3, and JavaScript. I build clean,
+      responsive, and user-friendly web pages that work smoothly across all
+      devices. On the back end, I work with Laravel, PHP, and MySQL to create
+      secure, database-driven applications. I am currently learning React and
+      Node.js to strengthen my skills further.
+    </p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="max-w-6xl mx-auto px-5 py-16 text-center reveal">
+  <p class="eyebrow">What I know</p>
+  <h2 class="font-display text-4xl mt-2 mb-10">Skills</h2>
+  <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+    <span class="pill"><span class="dot"></span>HTML5</span>
+    <span class="pill tinted"><span class="dot"></span>CSS3</span>
+    <span class="pill"><span class="dot"></span>JavaScript</span>
+    <span class="pill tinted"><span class="dot"></span>Laravel</span>
+    <span class="pill"><span class="dot"></span>PHP</span>
+    <span class="pill tinted"><span class="dot"></span>Angular</span>
+    <span class="pill"><span class="dot"></span>Tailwind CSS</span>
+    <span class="pill tinted"><span class="dot"></span>MySQL</span>
+    <span class="pill"><span class="dot"></span>Firebase</span>
+    <span class="pill tinted"><span class="dot"></span>Supabase</span>
+    <span class="pill"><span class="dot"></span>Git & GitHub</span>
+    <span class="pill tinted"><span class="dot"></span>REST API</span>
+    <span class="pill"><span class="dot"></span>Figma</span>
+    <span class="pill tinted"><span class="dot"></span>Video Editing</span>
+    <span class="pill"><span class="dot"></span>Canva</span>
+    <span class="pill tinted"><span class="dot"></span>React <em class="not-italic text-[var(--text-dim)]">(learning)</em></span>
+  </div>
+</section>
+
+<!-- What I Do — 3D Cube (dark section on purpose, on an otherwise light page) -->
+<section class="reveal dark-section" style="background: var(--dark-bg); color: #EDEAF5;">
+<div class="max-w-6xl mx-auto px-5 py-20">
+  <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="eyebrow inline-flex items-center gap-3">
+        <span class="w-6 h-px bg-[var(--accent)]"></span>
+        What I Build
+        <span class="w-6 h-px bg-[var(--accent)]"></span>
+      </span>
+      <h2 class="font-display text-5xl md:text-6xl mt-5 leading-[1.05] uppercase tracking-tight">
+        Skills That<br>
+        <span class="text-[var(--accent)] glow-text">Deliver.</span>
+      </h2>
+    </div>
+
+    <div class="cube-scene !py-0">
+      <div class="cube">
+      <div class="cube-face" data-face="1">
+        <div>
+          <span class="font-mono text-xs text-[var(--accent)] mb-3">01</span>
+          <h3 class="font-display text-xl mb-3">Frontend Development</h3>
+          <p class="text-sm text-[var(--text-dim)] leading-relaxed">
+            Clean, responsive interfaces built with real HTML, CSS, and JavaScript.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill text-xs">HTML/CSS</span>
+          <span class="pill tinted text-xs">JavaScript</span>
+        </div>
+      </div>
+      <div class="cube-face" data-face="2">
+        <div>
+          <span class="font-mono text-xs text-[var(--accent-2)] mb-3">02</span>
+          <h3 class="font-display text-xl mb-3">Backend (Laravel/PHP)</h3>
+          <p class="text-sm text-[var(--text-dim)] leading-relaxed">
+            Full backend systems — routes, databases, and business logic on Laravel PHP.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill text-xs">Laravel</span>
+          <span class="pill tinted text-xs">MySQL</span>
+        </div>
+      </div>
+      <div class="cube-face" data-face="3">
+        <div>
+          <span class="font-mono text-xs text-[var(--accent-3)] mb-3">03</span>
+          <h3 class="font-display text-xl mb-3">UI/UX Design</h3>
+          <p class="text-sm text-[var(--text-dim)] leading-relaxed">
+            Interfaces designed with intent — clear layouts, real hierarchy, no guesswork.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill text-xs">Figma</span>
+          <span class="pill tinted text-xs">Canva</span>
+        </div>
+      </div>
+      <div class="cube-face" data-face="4">
+        <div>
+          <span class="font-mono text-xs text-[var(--accent)] mb-3">04</span>
+          <h3 class="font-display text-xl mb-3">Problem Solving</h3>
+          <p class="text-sm text-[var(--text-dim)] leading-relaxed">
+            Tracing a bug or a messy requirement back to its real cause, not just the symptom.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill text-xs">Debugging</span>
+          <span class="pill tinted text-xs">REST API</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="max-w-6xl mx-auto px-5 py-16 reveal">
+  <div class="text-center mb-10">
+    <p class="eyebrow">See what I've built</p>
+    <h2 class="font-display text-4xl mt-2">My Projects</h2>
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-3 mb-10">
+    <button class="filter-tab active" data-filter="all">All</button>
+    <button class="filter-tab" data-filter="laravel">Laravel</button>
+    <button class="filter-tab" data-filter="angular">Angular</button>
+    <button class="filter-tab" data-filter="html-css">HTML/CSS</button>
+    <button class="filter-tab" data-filter="electron-react">Electron/React</button>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <!-- Bin Imtiaz Store -->
+    <article class="project-card" data-category="laravel">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/binimtiaz.png" alt="Bin Imtiaz Store screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/binimtiaz1.png" alt="Bin Imtiaz Store screenshot 2" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/binimtiaz2.png" alt="Bin Imtiaz Store screenshot 3" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">Laravel</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">Bin Imtiaz Store</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          An e-commerce clothing store built from scratch with Laravel PHP, handling catalog, cart, and checkout.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">Laravel</span>
+          <span class="pill tinted">PHP</span>
+          <span class="pill">MySQL</span>
+        </div>
+        <a href="projects/bin-imtiaz-store.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+    <!-- Softdap -->
+    <article class="project-card" data-category="html-css">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/Softdap-1.png" alt="Softdap screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/Softdap-2.png" alt="Softdap screenshot 2" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/Softdap-3.png" alt="Softdap screenshot 3" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">HTML/CSS</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">Softdap</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          Built the frontend for Softdap, a software development company's website on a Laravel PHP backend.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">HTML</span>
+          <span class="pill tinted">CSS</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill tinted">Laravel</span>
+        </div>
+        <a href="projects/softdap.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+    <!-- SupportNova -->
+    <article class="project-card" data-category="html-css">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/Electro-Nova-1.jpg" alt="SupportNova screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/Electro-Nova-2.jpg" alt="SupportNova screenshot 2" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">HTML/CSS</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">SupportNova</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          Customer-facing frontend for a complaint-management platform at TechWiz — validated uploads, secure DOM rendering.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">HTML</span>
+          <span class="pill tinted">CSS</span>
+          <span class="pill">JavaScript</span>
+        </div>
+        <a href="projects/supportnova.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+    <!-- Cafeali -->
+    <article class="project-card" data-category="electron-react">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/CafeAli-1.png" alt="Cafeali screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/CafeAli-2.png" alt="Cafeali screenshot 2" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/CafeALi-3.png" alt="Cafeali screenshot 3" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">Electron/React</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">Cafeali</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          A restaurant management app for Cafeali — cashier billing, a live kitchen display, and a manager dashboard for revenue, active tables, and low-stock alerts.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">Electron</span>
+          <span class="pill tinted">React</span>
+          <span class="pill">FastAPI</span>
+        </div>
+        <a href="projects/cafeali.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+    <!-- Personal Portfolio (Angular) -->
+    <article class="project-card" data-category="angular">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/portfolio.png" alt="Personal Portfolio screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/portfolio1.png" alt="Personal Portfolio screenshot 2" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/portfolio2.png" alt="Personal Portfolio screenshot 3" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">Angular</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">Personal Portfolio</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          A robust portfolio website built with Angular and TypeScript, showcasing my projects and skills.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">Angular</span>
+          <span class="pill tinted">TypeScript</span>
+          <span class="pill">Tailwind CSS</span>
+        </div>
+        <a href="projects/personal-portfolio.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+    <!-- Chandi Factory -->
+    <article class="project-card" data-category="html-css">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/chandifactory.png" alt="Chandi Factory screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/chandifactory1.png" alt="Chandi Factory screenshot 2" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/chandifactory2.png" alt="Chandi Factory screenshot 3" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">HTML/CSS</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">Chandi Factory</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          Combining traditional artistry with modern precision to produce high-quality pure silver masterpieces.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">HTML</span>
+          <span class="pill tinted">CSS</span>
+          <span class="pill">JavaScript</span>
+        </div>
+        <a href="projects/chandi-factory.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+    <!-- Garden World -->
+    <article class="project-card" data-category="html-css">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/gardenworld .png" alt="Garden World screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/gardenworld1.png" alt="Garden World screenshot 2" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/gardenworld2.png" alt="Garden World screenshot 3" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">HTML/CSS</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">Garden World</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          A responsive plant & gardening website built with clean and modern UI.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">HTML</span>
+          <span class="pill tinted">CSS</span>
+          <span class="pill">JavaScript <em class="not-italic text-[var(--text-dim)] text-xs">?</em></span>
+        </div>
+        <a href="projects/garden-world.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+    <!-- ONYKS Solutions -->
+    <article class="project-card" data-category="html-css">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/onyx.png" alt="ONYKS Solutions screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/onyx1.png" alt="ONYKS Solutions screenshot 2" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/onyx2.png" alt="ONYKS Solutions screenshot 3" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">HTML/CSS</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">ONYKS Solutions</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          A professional legal consultancy website with a Guide and Contact page for businesses across Pakistan.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">HTML</span>
+          <span class="pill tinted">CSS</span>
+          <span class="pill">JavaScript <em class="not-italic text-[var(--text-dim)] text-xs">?</em></span>
+        </div>
+        <a href="projects/onyks-solutions.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+    <!-- AutoTestCertify -->
+    <article class="project-card" data-category="html-css">
+      <div class="carousel" data-carousel>
+        <div data-carousel-track class="flex w-full h-full transition-transform duration-300">
+          <div class="w-full h-full shrink-0"><img src="images/autotestcertify1.png" alt="AutoTestCertify screenshot 1" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/autotestcertify2.png" alt="AutoTestCertify screenshot 2" class="w-full h-full object-contain"></div>
+          <div class="w-full h-full shrink-0"><img src="images/autotestcertify3.png" alt="AutoTestCertify screenshot 3" class="w-full h-full object-contain"></div>
+        </div>
+        <span class="category-badge">HTML/CSS</span>
+        <button class="carousel-arrow prev">‹</button>
+        <button class="carousel-arrow next">›</button>
+        <div class="carousel-dots"><span class="active"></span><span></span><span></span></div>
+      </div>
+      <div class="p-4">
+        <h3 class="font-bold text-lg">AutoTestCertify</h3>
+        <p class="card-desc text-sm text-[var(--text-dim)] mt-1 leading-relaxed">
+          Tracks product tests to pass/fail, routes to certification or re-manufacturing, with a dashboard, automated IDs, and an AI chat assistant.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="pill">HTML</span>
+          <span class="pill tinted">CSS</span>
+          <span class="pill">Bootstrap</span>
+          <span class="pill tinted">Laravel</span>
+        </div>
+        <a href="projects/autotestcertify.html" class="inline-block mt-3 text-sm font-bold text-[var(--accent)]">View Project →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="max-w-6xl mx-auto px-5 py-20 text-center reveal">
+  <p class="eyebrow">Let's work together</p>
+  <h2 class="font-display text-4xl mt-2 mb-6">Hire Me</h2>
+  <p class="text-[var(--text-dim)] max-w-xl mx-auto mb-8">
+    Open to remote frontend roles. Reach out, or grab my CV below.
+  </p>
+  <div class="flex items-center justify-center gap-4 flex-wrap mb-8">
+    <a href="mailto:hayashakil24@gmail.com" class="pill tinted">Email</a>
+    <a href="https://www.linkedin.com/in/haya-shakil-2409c?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="pill">LinkedIn</a>
+    <a href="https://github.com/hayashakil24-eng?tab=overview&from=2026-09-01&to=2026-09-30" target="_blank" rel="noopener" class="pill tinted">GitHub</a>
+    <a href="https://www.instagram.com/the.software.mind/" target="_blank" rel="noopener" class="pill">Instagram</a>
+  </div>
+  <a href="cv.pdf" download
+     class="inline-block bg-[var(--accent)] text-white font-bold px-8 py-3 rounded-full hover:!bg-[var(--accent-hover)] transition">
+    Download CV
+  </a>
+</section>
+
+<footer class="border-t border-[var(--border)] bg-[var(--surface)]">
+  <div class="max-w-6xl mx-auto px-5 py-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <div>
+      <a href="#" class="font-display text-2xl">Haya<span class="text-[var(--accent)]">.</span></a>
+      <p class="text-sm text-[var(--text-dim)] mt-3 max-w-xs">
+        Frontend Developer, open to remote roles. Clean, functional web
+        experiences built with real HTML, CSS, and JavaScript.
+      </p>
+      <a href="mailto:hayashakil24@gmail.com"
+         class="inline-flex items-center gap-1.5 text-sm font-semibold mt-4 text-[var(--text-dim)] hover:text-[var(--accent)] transition">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        hayashakil24@gmail.com
+      </a>
+    </div>
+
+    <div>
+      <p class="font-display text-sm uppercase tracking-wide">Find It Fast</p>
+      <nav class="flex flex-col gap-2.5 mt-4 text-sm">
+        <a href="#about" class="text-[var(--text-dim)] hover:text-[var(--accent)] transition">About</a>
+        <a href="#skills" class="text-[var(--text-dim)] hover:text-[var(--accent)] transition">Skills</a>
+        <a href="#projects" class="text-[var(--text-dim)] hover:text-[var(--accent)] transition">Projects</a>
+        <a href="#contact" class="text-[var(--text-dim)] hover:text-[var(--accent)] transition">Contact</a>
+      </nav>
+    </div>
+
+    <div>
+      <p class="font-display text-sm uppercase tracking-wide">Get In Touch</p>
+      <nav class="flex flex-col gap-2.5 mt-4 text-sm">
+        <a href="cv.pdf" download class="text-[var(--text-dim)] hover:text-[var(--accent)] transition">Download CV</a>
+        <a href="https://www.linkedin.com/in/haya-shakil-2409c?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="text-[var(--text-dim)] hover:text-[var(--accent)] transition">LinkedIn</a>
+        <a href="https://github.com/hayashakil24-eng?tab=overview&from=2026-09-01&to=2026-09-30" target="_blank" rel="noopener" class="text-[var(--text-dim)] hover:text-[var(--accent)] transition">GitHub</a>
+      </nav>
+    </div>
+
+  </div>
+
+  <div class="border-t border-[var(--border)]">
+    <div class="max-w-6xl mx-auto px-5 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-[var(--text-dim)]">© 2026 Haya Shakil. All rights reserved.</p>
+
+      <div class="flex items-center gap-3">
+        <a href="mailto:hayashakil24@gmail.com" aria-label="Email"
+           class="w-9 h-9 rounded-full bg-[var(--bg)] border border-[var(--border)] flex items-center justify-center text-[var(--text-dim)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/haya-shakil-2409c?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn"
+           class="w-9 h-9 rounded-full bg-[var(--bg)] border border-[var(--border)] flex items-center justify-center text-[var(--text-dim)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.3ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+        </a>
+        <a href="https://github.com/hayashakil24-eng?tab=overview&from=2026-09-01&to=2026-09-30" target="_blank" rel="noopener" aria-label="GitHub"
+           class="w-9 h-9 rounded-full bg-[var(--bg)] border border-[var(--border)] flex items-center justify-center text-[var(--text-dim)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.5 3.17-1.18 3.17-1.18.64 1.6.24 2.77.12 3.06.74.8 1.19 1.82 1.19 3.08 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.08.78 2.18v3.24c0 .31.21.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/the.software.mind/" target="_blank" rel="noopener" aria-label="Instagram"
+           class="w-9 h-9 rounded-full bg-[var(--bg)] border border-[var(--border)] flex items-center justify-center text-[var(--text-dim)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
